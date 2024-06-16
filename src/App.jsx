@@ -4,6 +4,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import ToDo from './ToDo'
 
 function App() {
 
@@ -12,20 +13,20 @@ function App() {
     <>
 
       <h1>Vite + React</h1>
-
-      <Device name="Laptop" price="55"></Device>
+      <ToDo Task="Learn React" isDone={true}></ToDo>
+      <ToDo Task="Explore core concepts" isDone={false}></ToDo>
+      <ToDo Task="Try JSX" isDone={true}></ToDo>
+      {/* <Device name="Laptop" price="55"></Device>
       <Device name="Mobile" price="17"></Device>
       <Device name="watch" price="3"></Device>
-      <Person></Person>
+      <Person></Person> */}
       {/* we can send integer ,boolean etc except string using {} */}
-      <Student grade="7" score={99}></Student>
+      {/* <Student grade="7" score={99}></Student>
       <Student grade="12" score={85}></Student>
       <Student></Student>
-      <Developer></Developer>
+      <Developer></Developer> */}
 
-      <p className="read-the-docs">
-        My name is Shihab Uddin. How are you?
-      </p>
+
     </>
   )
 }
