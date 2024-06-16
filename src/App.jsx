@@ -17,8 +17,9 @@ function App() {
       <Device name="Mobile" price="17"></Device>
       <Device name="watch" price="3"></Device>
       <Person></Person>
-      <Student grade="7" score="99"></Student>
-      <Student></Student>
+      {/* we can send integer ,boolean etc except string using {} */}
+      <Student grade="7" score={99}></Student>
+      <Student grade="12" score={85}></Student>
       <Student></Student>
       <Developer></Developer>
 
@@ -28,7 +29,7 @@ function App() {
     </>
   )
 }
-
+// Props is read only . you cant change props value
 function Device(props) {
   // console.log(props)
   return (
@@ -44,13 +45,14 @@ function Person() {
   }
   return <h3>I am {person.name}. And my age is {person.age}</h3>;
 }
+// we can set by default value here as well .We have used destructuring to get value
+function Student({ grade = 0, score = 0 }) {
+  // console.log(props)
 
-function Student(props) {
-  console.log(props)
   return (<div className='student'>
     <h3>This is a Student</h3>
-    <p>Name: </p>
-    <p>Age: </p>
+    <p>Grade: {grade}</p>
+    <p>Score: {score}</p>
   </div>
   )
 }
