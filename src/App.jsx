@@ -8,6 +8,8 @@ import './App.css'
 import ToDo from './ToDo'
 import Actor from './Actor'
 import Singer from './Singer'
+import BookStore from './BookStore'
+
 function App() {
 
   const actors = ['Sakib', 'Shoriful Raj', 'Jasim', 'Rubel', 'Salman Shah'];
@@ -17,11 +19,18 @@ function App() {
     { id: 3, name: "Suvro Dev", age: 58 },
     { id: 4, name: "Pritom", age: 28 }
   ];
+  const books = [
+    { id: 1, name: 'Physics', price: 100 },
+    { id: 2, name: 'Math', price: 200 },
+    { id: 3, name: 'Chemistry', price: 300 },
+    { id: 4, name: 'Biology', price: 400 },
+  ]
   return (
 
     <>
 
       <h1>Vite + React</h1>
+      <BookStore books={books}></BookStore>
       {/* print all the singers array of object data */}
       {
         singers.map(singer => <Singer singer={singer}></Singer>)
